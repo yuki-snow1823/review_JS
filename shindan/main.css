@@ -15,4 +15,22 @@ body {
   width: 300px;
   height: 100px;
   background: #cae6f4;
+  /* アニメーションにする */
+  transition: 0.8s;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  float: left;
+}
+
+.card+.card {
+  margin-left: 100px;
+}
+
+#cards.move {
+  /* 動く幅 */
+  transform: translate(-200px, 0);
 }
