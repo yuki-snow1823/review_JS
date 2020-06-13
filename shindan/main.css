@@ -9,6 +9,8 @@ body {
   width: 100px;
   height: 100px;
   border: 2px solid #bbb;
+  /* はみ出ている部分を消す */
+  overflow: hidden;
 }
 
 #cards {
