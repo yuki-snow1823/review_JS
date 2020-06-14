@@ -4,6 +4,8 @@
   var cards = document.getElementById("cards");
   var check = document.getElementById("check");
   var retry = document.getElementById("retry");
+  var userName = document.getElementById('user_name');
+  userName.focus();
 
   check.addEventListener("click", function () {
     let msgs = [
@@ -52,22 +54,30 @@
     function setTextContent(id, text) {
       document.getElementById(id).textContent = text;
     }
-
+    if (userName.value === '' || userName.value.length > 10) {
+      userName.value = '名無し';
+    }
+    
     msg = getRandomElement(msgs);
     job = getRandomElement(jobs);
     type = getRandomElement(types);
 
     // メッセージの表示
+    setTextContent("result_name", userName.value);
     setTextContent("result_msg", msg);
     setTextContent("result_job", job.name);
     // 一番最初の要素
     resultImg.children[0].src = job.img;
     setTextContent("result_type", type.name);
 
+
+    resultImg.className = "left-side " + type.img;
     cards.className = "move";
   });
 
   retry.addEventListener("click", function () {
+    userName.value = "";
+    userName.focus();
     cards.className = "";
   });
 })();

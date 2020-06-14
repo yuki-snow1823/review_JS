@@ -37,6 +37,8 @@ body {
 .left-side {
   width: 160px;
   float: left;
+  border-radius: 10px;
+  background-size: cover;
 }
 
 .left-side img {
@@ -75,9 +77,9 @@ body {
 }
 
 #tweet {
+  margin-bottom: 20px;
   background: #1da1f2;
   box-shadow: 0 5px 0 #006dbf;
-  margin-bottom: 20px;
 }
 
 #result_name,
@@ -90,4 +92,16 @@ body {
 #retry {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.bg-fire {
+  background-image: url(../shindan/shindan_js_v3/MyChecker/img/bg-fire.gif);
+}
+
+.bg-water {
+  background-image: url(../shindan/shindan_js_v3/MyChecker/img/bg-water.gif);
+}
+
+.bg-thunder {
+  background-image: url(../shindan/shindan_js_v3/MyChecker/img/bg-thunder.gif);
 }
