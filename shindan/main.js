@@ -6,7 +6,7 @@
   var retry = document.getElementById("retry");
 
   check.addEventListener("click", function () {
-    let msg = [
+    let msgs = [
       "究極の進化を遂げた",
       "究極の退化を遂げた",
       "究極のアレを遂げた",
@@ -14,33 +14,56 @@
     // 連想配列
     let jobs = [{
         name: "勇者",
-        img: "/shindan/shindan_js_v3/MyChecker/img/hero.gif"
+        img: "./shindan_js_v3/MyChecker/img/hero.gif"
       },
       {
         name: "魔法使い",
-        img: "/shindan/shindan_js_v3/MyChecker/img/wizard.gif"
+        img: "./shindan_js_v3/MyChecker/img/wizard.gif"
       },
       {
         name: "武道家",
-        img: "/shindan/shindan_js_v3/MyChecker/img/fighter.gif"
+        img: "./shindan_js_v3/MyChecker/img/fighter.gif"
       }
     ]
-    let types = [{
-        name: "神の炎",
+    var types = [{
+        name: "その炎はすべてを焼き尽くす",
         img: "bg-fire"
       },
       {
-        name: "神の水",
-        img: "bg-water",
+        name: "その清水ですべてを浄化する",
+        img: "bg-water"
       },
       {
-        name: "神の雷",
-        img: "bg-thunder",
+        name: "その雷撃は万物の怒りを鎮める",
+        img: "bg-thunder"
       },
     ];
-    function getRandomElement(arr) {
-      return arr[Math.floor(Math.random() * array.length)];
+
+    var msg;
+    var job;
+    var type;
+
+    var resultImg = document.getElementById("result_img");
+
+    function getRandomElement(array) {
+      return array[Math.floor(Math.random() * array.length)];
     }
+
+    function setTextContent(id, text) {
+      document.getElementById(id).textContent = text;
+    }
+
+    msg = getRandomElement(msgs);
+    job = getRandomElement(jobs);
+    type = getRandomElement(types);
+
+    // メッセージの表示
+    setTextContent("result_msg", msg);
+    setTextContent("result_job", job.name);
+    // 一番最初の要素
+    resultImg.children[0].src = job.img;
+    setTextContent("result_type", type.name);
+
     cards.className = "move";
   });
 
