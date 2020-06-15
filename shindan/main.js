@@ -47,6 +47,7 @@
 
     var resultImg = document.getElementById("result_img");
 
+
     function getRandomElement(array) {
       return array[Math.floor(Math.random() * array.length)];
     }
@@ -61,6 +62,16 @@
     msg = getRandomElement(msgs);
     job = getRandomElement(jobs);
     type = getRandomElement(types);
+    console.log(job.name);
+    var tweet = document.getElementById("tweet");
+    var tweetUrl;
+    tweetUrl =
+      "https://twitter.com/intent/tweet?text=" +
+      encodeURIComponent(
+        userName.value + "さんは" + msg + job.name + "でした！"
+      ) +
+      "&hashtags=dotinstall";
+    tweet.href = tweetUrl;
 
     // メッセージの表示
     setTextContent("result_name", userName.value);
@@ -80,4 +91,5 @@
     userName.focus();
     cards.className = "";
   });
+  
 })();
