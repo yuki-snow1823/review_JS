@@ -3,19 +3,17 @@
 {
   document.querySelector("button").addEventListener("click", () => {
     const colors = document.querySelectorAll("input");
-    // 値の保持
-    let selectedColor;
+    const selectedColors = [];
 
-    // colorsに対してroop処理
     colors.forEach((color) => {
-      // 要素がチェックされているか（ラジオぼたん）
       if (color.checked === true) {
-        selectedColor = color.value;
+        selectedColors.push(color.value);
       }
     });
 
     const li = document.createElement("li");
-    li.textContent = selectedColor;
+    // li.textContent = selectedColors.join(',');
+    li.textContent = selectedColors;
     document.querySelector("ul").appendChild(li);
   });
 }
