@@ -1,9 +1,10 @@
 'use strict';
 
 {
-  document.querySelector("form").addEventListener("submit", (e) => {
-    e.preventDefault();// ページ遷移の拒否
-    console.log(e);
-    console.log("submit");
+  // e引数があるから()を消した
+  document.querySelector('ul').addEventListener('click', e => {
+    if (e.target.nodeName === "LI") {
+      e.target.classList.toggle('done'); // つけ外し
+    }
   });
 }

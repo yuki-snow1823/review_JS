@@ -4,13 +4,24 @@
 <head>
   <meta charset="utf-8">
   <title>JavaScript Basics</title>
-</head>
+  <style>
+    li {
+      cursor: pointer;
+    }
 
-<body>
-  <form>
-    <input type="text">
-    <button>Post</button>
-  </form>
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
+  </head>
+
+  <body>
+    <ul>
+      <!-- e.currentTarget -->
+      <li>Todo</li>
+      <li>Todo</li> <!-- e.target -->
+      <li>Todo</li>
+    </ul>
 
 
   <script src="main.js"></script>
