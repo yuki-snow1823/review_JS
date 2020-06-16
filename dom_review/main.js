@@ -6,6 +6,6 @@
 
     // targetNode.className = 'my-color';
     // 元の名前も追加しないといけない
-    targetNode.className = "my-color my-border";
+    targetNode.classList.add("my-color");
   });
 }
