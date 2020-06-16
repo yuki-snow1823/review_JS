@@ -5,7 +5,8 @@
     console.log("Double Clicked!");
   });
 
-  document.addEventListener("mousemove", () => {
+  document.addEventListener("mousemove", e => {
+    console.log(e.clientX, e.clientY);
     console.log("moved!");
   });
 }
