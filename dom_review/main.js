@@ -2,10 +2,11 @@
 
 {
   document.querySelector("button").addEventListener("click", () => {
-    const targetNode = document.getElementById("target");
+    const item0 = document.querySelectorAll("li")[0];
+    const copy = item0.cloneNode(true);
 
-    // targetNode.className = 'my-color';
-    // 元の名前も追加しないといけない
-    targetNode.classList.add("my-color");
+    const ul = document.querySelector("ul");
+    const item2 = document.querySelectorAll("li")[2];
+    ul.insertBefore(copy, item2);
   });
 }
