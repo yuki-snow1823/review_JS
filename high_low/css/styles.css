@@ -29,3 +29,21 @@ body {
 .player {
   float: left;
 }
+
+#result {
+  line-height: 70px;
+  color: #f1c40f;
+}
+
+.btn {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: green;
+  border: 5px solid #fff;
+  font-size: 14px;
+  color: #fff;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  line-height: 70px;
+}
