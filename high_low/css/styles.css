@@ -71,3 +71,11 @@ body {
   background: #f1c40f;
   color: #fff;
 }
+
+#wrapper:active {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
