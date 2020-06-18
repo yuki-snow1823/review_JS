@@ -21,7 +21,7 @@ body {
 .controls {
   width: 200px;
   height: 70px;
-  background: gray;
+  position: relative;
 }
 
 .dealer,
@@ -46,4 +46,15 @@ body {
   color: #fff;
   box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
   line-height: 70px;
+  position: absolute;
+  /*100 - 40 = 60*/
+  left: 60px;
+}
+
+#higher {
+  top: -85px;
+}
+
+#lower {
+  top: 70px;
 }
