@@ -72,10 +72,32 @@ body {
   color: #fff;
 }
 
-#wrapper:active {
+#wrapper.open {
   transform: rotateY(180deg);
 }
 
 .card-front {
   transform: rotateY(180deg);
+}
+
+#wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+
+.card-back,
+.card-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.player {
+  perspective: 100px;
+}
+
+#result.hidden {
+  visibility: hidden;
 }
