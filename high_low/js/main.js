@@ -26,10 +26,12 @@
   function check(guess) {
     var str;
     wrapper.classList.add("open");
+    higher.classList.add("disabled");
+    lower.classList.add("disabled");
     if (playerValue === dealerValue) {
       str = "draw";
     } else {
-      str = "You " + getResultStr(guess); // 関数を文字列としてしまう
+      str = "You " + getResultStr(guess);
     }
     result.textContent = str;
     result.classList.remove("hidden");
@@ -56,9 +58,11 @@
     check("lower");
   });
 
-  dealerCard.addEventListener("click", function () {
+  dealerCard.addEventListener("click", function() {
     result.classList.add("hidden");
     wrapper.classList.remove("open");
+    higher.classList.remove("disabled");
+    lower.classList.remove("disabled");
     wrapper.addEventListener("transitionend", init);
   });
 })();
